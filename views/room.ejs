@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>const roomName = "<%= roomName %>";</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link href="/css/w3.css" rel="stylesheet" type="text/css">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1 class="w3-center">Chat Room</h1>
+<div class="w3-container-fluid w3-threequarter w3-display-middle w3-xxlarge">
+ <div class="w3-card-4 w3-medium w3-round-xlarge" id="messages" style="block-size: 30vw;overflow-y: auto;">
+    <!--we add messages here dynamically-->
+ </div>
+ <br><br>
+ <div class="w3-threequarter w3-display-bottommiddle w3-medium w3-round-xxlarge">
+    <form id="chatForm" onsubmit = "event.preventDefault();">
+        <input placeholder="Enter a message..." class="w3-input w3-threequarter w3-border-0" id="chat" autocomplete="off" autofocus>
+        <input type="submit" class="w3-button w3-quarter w3-round-xxlarge w3-green w3-hover-blue" value="send">
+       </form>
+ </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script defer src="/js/room.js"></script>
+</body>
+</html>
